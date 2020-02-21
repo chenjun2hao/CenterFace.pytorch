@@ -25,6 +25,28 @@ def test_img(MODEL_PATH):
     img = '../readme/000388.jpg'
     ret = detector.run(img)['results']
 
+def test_vedio(model_path, vedio_path=None):
+    debug = -1            # return the result image with draw
+    TASK = 'multi_pose'  
+    vis_thresh = 0.45
+    input_h, intput_w = 800, 800
+    opt = opts().init('--task {} --load_model {} --debug {} --input_h {} --input_w {} --vis_thresh {}'.format(
+        TASK, MODEL_PATH, debug, intput_w, input_h, vis_thresh).split(' '))
+    detector = detector_factory[opt.task](opt)
+
+    vedio = vedio_path if vedio_path else 0
+    cap = cv2.VideoCapture(vedio)
+    while cap.isOpened():
+        det = cap.grab()
+        if det:
+            flag, frame = cap.retrieve()
+            res = detector.run(frame)
+            cv2.imshow('face detect', res['plot_img'])
+
+        if cv2.waitKey(1)&0xFF == ord('q'):
+            break
+    cap.release()
+    cv2.destroyAllWindows()
 
 def test_wider_Face(model_path):
     Path = '/home/deepblue/deepbluetwo/data/WIDER_val/images/'
@@ -64,5 +86,6 @@ def test_wider_Face(model_path):
 
 if __name__ == '__main__':
     MODEL_PATH = '../exp/multi_pose/mobilev2_10/model_best.pth'
-    test_img(MODEL_PATH)
+    # test_img(MODEL_PATH)
+    test_vedio(MODEL_PATH)
     # test_wider_Face(MODEL_PATH)
