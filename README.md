@@ -50,6 +50,9 @@ Medium Val AP: 0.9131308732465665
 Hard   Val AP: 0.7717305552550734
 ```
 
+5. result
+![result](./readme/000388_result.png)
+
 ## Train
 the backbone use mobilev2 as the same with the original paper
 The annotation file is in coco format. the annotation file and train data can download for [Baidu](https://pan.baidu.com/s/1Gw3OoH8CZUKetVzIMHOfCg) password: ypbi
