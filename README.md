@@ -27,9 +27,9 @@ conda env create -f enviroment.yaml
 ```
 
 ## Test
-1. download the pretrained model from [Baidu](https://pan.baidu.com/s/1Gw3OoH8CZUKetVzIMHOfCg) password: ypbi
+1. download the pretrained model from [Baidu](https://pan.baidu.com/s/1--xWSq5zlvZ-83Y30utI_A) password: z2cs
 
-2. download the validation set of [WIDER_FACE](https://pan.baidu.com/s/1Gw3OoH8CZUKetVzIMHOfCg) password: ypbi
+2. download the validation set of [WIDER_FACE](https://pan.baidu.com/s/1--xWSq5zlvZ-83Y30utI_A) password: z2cs
 
 3. test on the validation set
 ```sybase
@@ -55,7 +55,7 @@ Hard   Val AP: 0.7717305552550734
 
 ## Train
 the backbone use mobilev2 as the same with the original paper
-The annotation file is in coco format. the annotation file and train data can download for [Baidu](https://pan.baidu.com/s/1Gw3OoH8CZUKetVzIMHOfCg) password: ypbi
+The annotation file is in coco format. the annotation file and train data can download for [Baidu](https://pan.baidu.com/s/1--xWSq5zlvZ-83Y30utI_A) password: z2cs
 train
 ```sybase
 cd $project/src/tools
