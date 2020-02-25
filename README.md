@@ -53,6 +53,9 @@ Hard   Val AP: 0.7717305552550734
 5. result
 ![result](./readme/000388_result.png)
 
+6. face recognition video
+[video](https://www.bilibili.com/video/av91632471/)
+
 ## Train
 the backbone use mobilev2 as the same with the original paper
 The annotation file is in coco format. the annotation file and train data can download for [Baidu](https://pan.baidu.com/s/1--xWSq5zlvZ-83Y30utI_A) password: z2cs
