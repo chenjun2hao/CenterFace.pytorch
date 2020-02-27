@@ -27,10 +27,9 @@ conda env create -f enviroment.yaml
 ```
 
 ## Test
-1. download the pretrained model from [Baidu](https://pan.baidu.com/s/1--xWSq5zlvZ-83Y30utI_A) password: z2cs
+1. download the pretrained model from [Baidu](https://pan.baidu.com/s/1aLBtwcCZDuthceDNDA2wXQ) password: fk2n
 
-2. download the validation set of [WIDER_FACE](https://pan.baidu.com/s/1--xWSq5zlvZ-83Y30utI_A) password: z2cs
-
+2. download the validation set of [WIDER_FACE](https://pan.baidu.com/s/1b5Uku0Bb13Zk9mf7mkZ3FA) password:  y4wg
 3. test on the validation set
 ```sybase
 cd $project/src
@@ -50,15 +49,15 @@ Medium Val AP: 0.9131308732465665
 Hard   Val AP: 0.7717305552550734
 ```
 
-5. result
+5. result  
 ![result](./readme/000388_result.png)
 
-6. face recognition video
+6. face recognition video  
 [video](https://www.bilibili.com/video/av91632471/)
 
 ## Train
 the backbone use mobilev2 as the same with the original paper
-The annotation file is in coco format. the annotation file and train data can download for [Baidu](https://pan.baidu.com/s/1--xWSq5zlvZ-83Y30utI_A) password: z2cs
+The annotation file is in coco format. the annotation file and train data can download for [Baidu](https://pan.baidu.com/s/1b5Uku0Bb13Zk9mf7mkZ3FA) password:  y4wg
 train
 ```sybase
 cd $project/src/tools
