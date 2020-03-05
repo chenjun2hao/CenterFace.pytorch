@@ -57,7 +57,7 @@ Hard   Val AP: 0.7717305552550734
 
 ## Train
 the backbone use mobilev2 as the same with the original paper
-The annotation file is in coco format. the annotation file and train data can download for [Baidu](https://pan.baidu.com/s/1b5Uku0Bb13Zk9mf7mkZ3FA) password:  y4wg
+The annotation file is in coco format. the annotation file and train data can download for [Baidu](链接: https://pan.baidu.com/s/1j_2wggZ3bvCuOAfZvjWqTg) password:  f9hh  
 train
 ```sybase
 cd $project/src/tools
