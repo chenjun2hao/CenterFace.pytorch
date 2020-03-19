@@ -6,13 +6,15 @@ The project provides training scripts, training data sets, and pre-training mode
 
 
 ## performance results on the validation set of WIDER_FACE 
-use the same train dataset without additional data
+use the same train dataset without additional data  
+for multi-scale,set the scale with **0.8,1.0,1.2,1.4**, but they also resize to 800*800, so i think it not the real multi-scale test.
+
 
 | Method | Easy | Medium | Hard|
 |:--------:| :--------:| :---------:| :------:|
-| ours(one scale)| 0.9257 | 0.9131   | 0.7717|
+| ours(one scale)| 0.9206 | 0.9089   | 0.7846
 | original | 0.922 | 0.911 | 0.782 |
-| ours(multi-scale) | - | - | - |
+| ours(multi-scale) | 0.9306 | 0.9193 | 0.8008 |
 
 
 ## Requirements
@@ -65,6 +67,21 @@ source activate torch110
 python main.py
 ```
 
+## the train tricks
+Training directly with the current code will not achieve the precision of the paper (I have also tested various scenarios).
+
+Here's how I train:
+
+1. First train with the size of 640×640/514×514
+
+2. Then fine tune with the size of 800×800
+
+3. For the easy and hard part, s = s * np.random. Choice (np.arange(0.3, 1.2, 0.1)). The larger the value, the more small samples will be generated
+
+or you can fine tuning on the pretrained model.
+
+---
+
 ## Train on your own data
 follow the [CenterNet](https://github.com/xingyizhou/CenterNet)
 
@@ -81,4 +98,5 @@ borrow code from [CenterNet](https://github.com/xingyizhou/CenterNet)
 > [**CenterNet**](https://github.com/xingyizhou/CenterNet)  
 > [CenterMulti](https://github.com/bleakie/CenterMulti)  
 > [Star-Clouds/CenterFace](https://github.com/Star-Clouds/CenterFace)
+
 
